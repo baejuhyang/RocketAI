@@ -1,4 +1,5 @@
 main.ch1 {
+    @apply w-full;
     & > div {
         @apply relative w-full;
 
@@ -14,23 +15,27 @@ main.ch1 {
             }
         }
 
-        & > figure {
-            @apply w-full flex justify-center 
-            absolute top-[66.31%];
+        & > div.wrapper {
+            @apply flex justify-center;
 
-            & > img {
-                @apply w-[89.33%];
-            }
+            & > figure {
+                @apply w-[89.33%] aspect-[351/621]
+                absolute top-[66.31%];
 
-            & > div.contents {
-                @apply absolute top-0 left-0;
-                //  top-1/2 left-1/2 -translate-x-1/2;
+                background-image: url('/images/table.png');
+                @apply bg-no-repeat bg-contain;
 
-                & > div.table-title {
-                    & > p:nth-last-child(2) {
-                        @apply text-xl font-bold;
+                & > div.contents {
+                    @apply bg-yellow-100;
+                    @apply top-0 left-0
+                     top-1/2 left-1/2 -translate-x-1/2;
+
+                    & > div.table-title {
+                        & > p:nth-last-child(2) {
+                            @apply text-xl font-bold;
+                        }
+                        //  -translate-y-1/2;
                     }
-                    //  -translate-y-1/2;
                 }
             }
         }
