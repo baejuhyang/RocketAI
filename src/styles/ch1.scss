@@ -1,6 +1,6 @@
 main.ch1 {
     & > div {
-        @apply relative;
+        @apply relative w-full;
 
         & > div.dialog {
             @apply flex flex-col text-center;
@@ -11,6 +11,27 @@ main.ch1 {
 
             &.d2 {
                 @apply absolute top-[50.5%] left-[38.23%] -translate-x-1/2 -translate-y-1/2;
+            }
+        }
+
+        & > figure {
+            @apply w-full flex justify-center 
+            absolute top-[66.31%];
+
+            & > img {
+                @apply w-[89.33%];
+            }
+
+            & > div.contents {
+                @apply absolute top-0 left-0;
+                //  top-1/2 left-1/2 -translate-x-1/2;
+
+                & > div.table-title {
+                    & > p:nth-last-child(2) {
+                        @apply text-xl font-bold;
+                    }
+                    //  -translate-y-1/2;
+                }
             }
         }
     }
