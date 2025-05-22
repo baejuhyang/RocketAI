@@ -1,0 +1,17 @@
+main.ch1 {
+    & > div {
+        @apply relative;
+
+        & > div.dialog {
+            @apply flex flex-col text-center;
+
+            &.d1 {
+                @apply absolute top-[33.34%] left-[34.93%] -translate-x-1/2 -translate-y-1/2;
+            }
+
+            &.d2 {
+                @apply absolute top-[50.5%] left-[38.23%] -translate-x-1/2 -translate-y-1/2;
+            }
+        }
+    }
+}
