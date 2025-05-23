@@ -6,9 +6,6 @@ module.exports = {
     ],
     theme: {
         extend: {},
-        screens: {
-            // xs: { max: '447px' }, // 447px 이하일 때
-        },
     },
     plugins: [],
 };

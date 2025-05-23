@@ -1,3 +1,4 @@
+@import './mixin.scss';
 figure {
     @apply w-[89.33%] aspect-[351/621];
     background-image: url('/images/table.png');
@@ -9,33 +10,41 @@ figure {
         @apply text-center;
 
         & > p:nth-child(2) {
-            @apply text-xl font-bold;
+            @apply text-xl font-semibold;
         }
     }
 
-    // & p {
-    //     @apply text-center text-xs;
-
-    //     &:nth-child(2) {
-    //         @apply font-bold;
-    //     }
-    // }
-
     & > table {
-        @apply w-[88.32%] border-r border-b
-        border-r-[1.05px] border-b-[1.05px] border-black;
+        @apply w-[88.32%];
+        border-right: 1px solid var(--allBlack);
 
         & thead th {
-            @apply text-xl font-bold;
+            @apply text-xl font-semibold p-3;
+
+            &.out {
+                border-right: 1px solid var(--allBlack);
+                border-bottom: 1px solid var(--allBlack);
+            }
+            &.in {
+                border-right: 1px solid var(--gray);
+                border-bottom: 1px solid var(--allBlack);
+            }
         }
 
         & tbody {
             & td.label {
+                @apply p-2 w-[15.18%];
+                border-right: 1px solid var(--allBlack);
+                border-bottom: 1px solid var(--allBlack);
+                &.in-b {
+                    border-bottom: 1px solid var(--gray);
+                }
+
                 & p {
                     @apply text-center;
 
                     &:first-child {
-                        @apply text-xs font-bold;
+                        @apply text-xs font-semibold;
                     }
 
                     &:nth-child(2) {
@@ -45,16 +54,57 @@ figure {
             }
 
             & td.text {
+                &.in {
+                    border-right: 1px solid var(--gray);
+                    border-bottom: 1px solid var(--allBlack);
+                }
+                &.out {
+                    border-right: 1px solid var(--allBlack);
+                    border-bottom: 1px solid var(--allBlack);
+                }
+
                 & p {
                     @apply text-center;
 
                     &:first-child {
-                        @apply text-xs font-bold;
+                        @apply text-xs font-semibold;
                     }
 
                     &:nth-child(2) {
                         @apply text-[7.82px];
                     }
+                }
+            }
+
+            & td.box {
+                &.in-b.in-r {
+                    border-right: 1px solid var(--gray);
+                    border-bottom: 1px solid var(--gray);
+                }
+                &.in-b.out-r {
+                    border-right: 1px solid var(--allBlack);
+                    border-bottom: 1px solid var(--gray);
+                }
+                &.out {
+                    border-right: 1px solid var(--allBlack);
+                    border-bottom: 1px solid var(--allBlack);
+                }
+                &.in {
+                    border-right: 1px solid var(--gray);
+                    border-bottom: 1px solid var(--allBlack);
+                }
+
+                &.black div {
+                    @include box(--black);
+                }
+                &.red div {
+                    @include box(--red);
+                }
+                &.blue div {
+                    @include box(--blue);
+                }
+                &.white div {
+                    @include box(--white);
                 }
             }
         }

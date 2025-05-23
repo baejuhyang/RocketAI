@@ -1,0 +1,27 @@
+@mixin box($bg) {
+    background-color: var($bg);
+    color: var(--white);
+    border-radius: 12.55px;
+
+    @if $bg == '--white' {
+        color: var(--black);
+        border: 1px solid var(--black);
+        border-radius: 12.55px;
+    }
+
+    @apply p-1 m-1;
+
+    & p {
+        @apply text-center;
+
+        &:first-child {
+            @apply text-[7.6px];
+        }
+        &:nth-child(2) {
+            @apply text-2xl font-medium;
+        }
+        &:last-child {
+            @apply text-[8.37px];
+        }
+    }
+}
