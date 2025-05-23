@@ -1,4 +1,5 @@
 import Ch1Dialog from '@/components/Ch1Dialog';
+import { Table } from '@/components/Table';
 import { TableTitle } from '@/components/TableTitle';
 
 export default function Home() {
@@ -9,10 +10,8 @@ export default function Home() {
                 <Ch1Dialog />
                 <div className="wrapper">
                     <figure>
-                        {/* <img src="/images/table.png" alt="표" /> */}
-                        <div className="contents">
-                            <TableTitle />
-                        </div>
+                        <TableTitle />
+                        <Table />
                     </figure>
                 </div>
             </div>

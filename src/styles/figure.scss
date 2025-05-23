@@ -1,0 +1,62 @@
+figure {
+    @apply w-[89.33%] aspect-[351/621];
+    background-image: url('/images/table.png');
+    @apply bg-no-repeat bg-contain;
+    @apply flex flex-col items-center gap-6
+    pt-8;
+
+    & > div.table-title {
+        @apply text-center;
+
+        & > p:nth-child(2) {
+            @apply text-xl font-bold;
+        }
+    }
+
+    // & p {
+    //     @apply text-center text-xs;
+
+    //     &:nth-child(2) {
+    //         @apply font-bold;
+    //     }
+    // }
+
+    & > table {
+        @apply w-[88.32%] border-r border-b
+        border-r-[1.05px] border-b-[1.05px] border-black;
+
+        & thead th {
+            @apply text-xl font-bold;
+        }
+
+        & tbody {
+            & td.label {
+                & p {
+                    @apply text-center;
+
+                    &:first-child {
+                        @apply text-xs font-bold;
+                    }
+
+                    &:nth-child(2) {
+                        @apply text-[7.82px];
+                    }
+                }
+            }
+
+            & td.text {
+                & p {
+                    @apply text-center;
+
+                    &:first-child {
+                        @apply text-xs font-bold;
+                    }
+
+                    &:nth-child(2) {
+                        @apply text-[7.82px];
+                    }
+                }
+            }
+        }
+    }
+}
