@@ -45,7 +45,6 @@ figure {
 
                     &:first-child {
                         @apply text-[9px] font-semibold;
-                        // xs:text-[9px];
                     }
 
                     &:nth-child(2) {
@@ -69,6 +68,9 @@ figure {
 
                     &:first-child {
                         @apply text-xs font-semibold;
+                    }
+                    &:first-child.no {
+                        @apply text-[7.82px];
                     }
 
                     &:nth-child(2) {
