@@ -9,7 +9,9 @@
         border-radius: 12.55px;
     }
 
-    @apply p-1 m-1;
+    @apply p-1 m-1
+    flex flex-col justify-between;
+    aspect-ratio: 1 / 1;
 
     & p {
         @apply text-center;
@@ -18,10 +20,14 @@
             @apply text-[7.6px];
         }
         &:nth-child(2) {
-            @apply text-2xl font-medium;
+            @apply text-[22px] font-medium leading-[18px];
         }
         &:last-child {
             @apply text-[8.37px];
         }
+    }
+
+    & p.no {
+        @apply text-[8.37px] font-normal;
     }
 }

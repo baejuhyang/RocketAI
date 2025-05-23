@@ -33,7 +33,7 @@ figure {
 
         & tbody {
             & td.label {
-                @apply p-2 w-[15.18%];
+                @apply p-2 w-[20%];
                 border-right: 1px solid var(--allBlack);
                 border-bottom: 1px solid var(--allBlack);
                 &.in-b {
@@ -44,7 +44,8 @@ figure {
                     @apply text-center;
 
                     &:first-child {
-                        @apply text-xs font-semibold;
+                        @apply text-[9px] font-semibold;
+                        // xs:text-[9px];
                     }
 
                     &:nth-child(2) {

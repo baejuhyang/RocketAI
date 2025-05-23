@@ -83,7 +83,7 @@ export const Table = () => {
                                             ))
                                         ) : (
                                             <div>
-                                                <p className="hangul">(없음)</p>
+                                                <p className="no">(없음)</p>
                                             </div>
                                         )
                                     ) : i === 1 || i === 2 ? (
